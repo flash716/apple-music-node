@@ -1,9 +1,9 @@
 export default abstract class ApiUrlBuilder {
-    constructor(protected urlName: String) {}
+    constructor(protected urlName: string) {}
 
-    abstract getManyUrl(storefront: String): string;
+    abstract getManyUrl(storefront: string): string;
 
-    getOneUrl(id: String, storefront: String): string {
+    getOneUrl(id: string, storefront: string): string {
         return this.getManyUrl(storefront) + `/${id}`;
     }
 }
