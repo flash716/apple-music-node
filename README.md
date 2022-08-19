@@ -27,7 +27,10 @@ You need to instantiate a client with your developer token:
 ```typescript
 import { Client } from "@yujinakayama/apple-music";
 
-const client = new Client({ developerToken: 'YOUR_DEVELOPER_TOKEN' });
+const client = new Client({ 
+  developerToken: 'YOUR_DEVELOPER_TOKEN',
+  mediaUserToken: 'YOUR_MUT' // optional
+});
 ```
 
 ### Fetching Single Resource
@@ -66,6 +69,43 @@ async function main() {
   //     short: `Sam Smith's new song is inspired by "the most beautiful road in America."`
   //   }
   // }
+}
+
+main();
+```
+
+### Fetching Many Resources
+
+You can fetch playlists, artists, songs, playlists, music videos, or stations, library playlists and songs with `client.RESOURCES.get()`:
+
+```typescript
+async function main() {
+  const client = new Client({ 
+    developerToken: 'YOUR_DEVELOPER_TOKEN',
+    mediaUserToken: 'YOUR_MUT'
+  });
+
+  const response = await client.library.playlists.getMany({ storefront: 'us' });
+  const playlists = response.data;
+
+  console.log(playlists); 
+  // [
+  //   {
+  //     id: 'p.zp6KlXEiBvxMR8g',
+  //     type: 'library-playlists',
+  //     href: '/v1/me/library/playlists/p.zp6KlXOiBvdMR8g',
+  //     attributes: {
+  //       canEdit: false,
+  //       name: 'My playlist',  
+  //       description: [Object],
+  //       isPublic: false,
+  //       artwork: [Artwork],
+  //       hasCatalog: true,
+  //       playParams: [PlayParameters],
+  //       dateAdded: 2022-08-19T08:22:08.000Z
+  //     }
+  //   }
+  // ]
 }
 
 main();
