@@ -1,0 +1,1 @@
+{"version":3,"file":"apiUrlBuilder.js","sourceRoot":"","sources":["../../../src/resourceClient/apiUrlBuilder/apiUrlBuilder.ts"],"names":[],"mappings":";;AAAA,MAA8B,aAAa;IACvC,YAAsB,OAAe;QAAf,YAAO,GAAP,OAAO,CAAQ;IAAG,CAAC;IAIzC,SAAS,CAAC,EAAU,EAAE,UAAkB;QACpC,OAAO,IAAI,CAAC,UAAU,CAAC,UAAU,CAAC,GAAG,IAAI,EAAE,EAAE,CAAC;IAClD,CAAC;CACJ;AARD,gCAQC"}

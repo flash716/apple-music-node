@@ -1,0 +1,1 @@
+{"version":3,"file":"apiUrlBuilder.d.ts","sourceRoot":"","sources":["../../../src/resourceClient/apiUrlBuilder/apiUrlBuilder.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,CAAC,QAAQ,OAAO,aAAa;IAC3B,SAAS,CAAC,OAAO,EAAE,MAAM;gBAAf,OAAO,EAAE,MAAM;IAErC,QAAQ,CAAC,UAAU,CAAC,UAAU,EAAE,MAAM,GAAG,MAAM;IAE/C,SAAS,CAAC,EAAE,EAAE,MAAM,EAAE,UAAU,EAAE,MAAM,GAAG,MAAM;CAGpD"}

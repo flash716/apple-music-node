@@ -1,0 +1,1 @@
+{"version":3,"file":"catalogUrl.d.ts","sourceRoot":"","sources":["../../../src/resourceClient/apiUrlBuilder/catalogUrl.ts"],"names":[],"mappings":"AAAA,OAAO,aAAa,MAAM,iBAAiB,CAAC;AAE5C,MAAM,CAAC,OAAO,OAAO,UAAW,SAAQ,aAAa;IAEjD,UAAU,CAAC,UAAU,EAAE,MAAM;CAGhC"}
