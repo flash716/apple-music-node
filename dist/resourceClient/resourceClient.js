@@ -14,9 +14,14 @@ const appleMusicError_1 = require("../appleMusicError");
 const baseResourceClient_1 = require("./baseResourceClient");
 class ResourceClient extends baseResourceClient_1.BaseResourceClient {
     getByUrl(url, options) {
+        var _a, _b, _c, _d;
         return __awaiter(this, void 0, void 0, function* () {
             let params = {
-                l: (options === null || options === void 0 ? void 0 : options.languageTag) || this.configuration.defaultLanguageTag
+                l: (options === null || options === void 0 ? void 0 : options.languageTag) || this.configuration.defaultLanguageTag,
+                include: (_a = options === null || options === void 0 ? void 0 : options.include) !== null && _a !== void 0 ? _a : undefined,
+                limit: (_b = options === null || options === void 0 ? void 0 : options.limit) !== null && _b !== void 0 ? _b : undefined,
+                extend: (_c = options === null || options === void 0 ? void 0 : options.extend) !== null && _c !== void 0 ? _c : undefined,
+                ids: (_d = options === null || options === void 0 ? void 0 : options.ids) !== null && _d !== void 0 ? _d : undefined,
             };
             const httpResponse = yield this.request('GET', url, params);
             if (!httpResponse.data) {

@@ -5,17 +5,29 @@ import { BaseResourceClient } from './baseResourceClient';
 
 interface Parameters {
   l?: string;
+  include?: string;
+  limit?: number;
+  extend?: string;
+  ids?: string;
 }
 
 interface Options {
   storefront?: string; 
   languageTag?: string
+  include?: string;
+  limit?: number;
+  extend?: string;
+  ids?: string;
 }
 
 export class ResourceClient<T extends ResponseRoot> extends BaseResourceClient {
   async getByUrl(url: string, options?: Options): Promise<T> {
     let params: Parameters = {
-      l: options?.languageTag || this.configuration.defaultLanguageTag
+      l: options?.languageTag || this.configuration.defaultLanguageTag,
+      include: options?.include ?? undefined,
+      limit: options?.limit ?? undefined,
+      extend: options?.extend ?? undefined,
+      ids: options?.ids ?? undefined,
     };
 
     const httpResponse = await this.request('GET', url, params);

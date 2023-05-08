@@ -3,6 +3,10 @@ import { BaseResourceClient } from './baseResourceClient';
 interface Options {
     storefront?: string;
     languageTag?: string;
+    include?: string;
+    limit?: number;
+    extend?: string;
+    ids?: string;
 }
 export declare class ResourceClient<T extends ResponseRoot> extends BaseResourceClient {
     getByUrl(url: string, options?: Options): Promise<T>;
