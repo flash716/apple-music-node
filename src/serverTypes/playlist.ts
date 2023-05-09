@@ -23,6 +23,7 @@ namespace Playlist {
     playParams?: PlayParameters;
     playlistType: 'user-shared' | 'editorial' | 'external' | 'personal-mix';
     url: string;
+    canEdit: boolean;
   }
 
   // https://developer.apple.com/documentation/applemusicapi/playlist/relationships

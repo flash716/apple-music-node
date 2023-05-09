@@ -19,6 +19,7 @@ declare namespace Playlist {
         playParams?: PlayParameters;
         playlistType: 'user-shared' | 'editorial' | 'external' | 'personal-mix';
         url: string;
+        canEdit: boolean;
     }
     interface Relationships {
         curator?: CuratorRelationship;
